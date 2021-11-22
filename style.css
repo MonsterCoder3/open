@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da|Butcherman|Creepster');
+ * {
+	 box-sizing: border-box;
+}
+ body {
+	 height: 100vh;
+	 background: url(https://steamuserimages-a.akamaihd.net/ugc/100603690261120555/3288949BD5D35B3BCFA9DE0B65FAADE54BBD701C/);
+	 background-size: cover;
+	 background-position: bottom;
+	 display: grid;
+	 grid-gap: 0;
+	 grid-template-columns: 100vw;
+	 grid-template-areas: "header" "content" "footer";
+	 overflow: hidden;
+}
+ body HEADER, body .container, body FOOTER {
+	 grid-column-start: 1;
+	 grid-column-end: 2;
+}
+ body HEADER {
+	 grid-row-start: 1;
+	 grid-row-end: 2;
+}
+ body .container {
+	 grid-row-start: 2;
+	 grid-row-end: 3;
+}
+ body FOOTER {
+	 grid-row-start: 3;
+	 grid-row-end: 4;
+	 justify-self: center;
+	 align-self: center;
+}
+ .container {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .container h3 {
+	 --text-color: #fff;
+	 font-family: 'Creepster', cursive;
+	 text-align: center;
+	 font-size: 6.75vh;
+	 color: var(--text-color);
+	 -webkit-text-stroke: 1px black;
+	 text-shadow: 0 0.5vh 2vh lime;
+	 position: absolute;
+	 left: 50%;
+	 transform: translateX(-50%) rotate(-5deg);
+}
+ .container .monster {
+	 position: relative;
+	 height: 60vh;
+	 margin: 0 10vh;
+}
+ .container .monster DIV:after {
+	 transition: 0.3s opacity linear;
+	 opacity: 0.2;
+}
+ .container .monster h3 {
+	 opacity: 0;
+	 transition: 0.3s opacity linear;
+}
+ .container .monster h3:before {
+	 content: attr(data-num);
+	 font-size: 0.5em;
+	 position: absolute;
+	 top: -20%;
+	 left: 5%;
+}
+ .container .monster:hover DIV:after {
+	 opacity: 1;
+}
+ .container .monster:hover h3 {
+	 opacity: 1;
+}
+ .pixel-art {
+	 list-style: none;
+}
+ .pixel-art--frankenstein {
+	 position: relative;
+	 width: 21vh;
+	 height: 34.5vh;
+}
+ .pixel-art--frankenstein:after {
+	 content: '';
+	 position: absolute;
+	 top: -1.5vh;
+	 left: -1.5vh;
+	 width: 1.5vh;
+	 height: 1.5vh;
+	 box-shadow: 1.5vh 1.5vh rgba(0, 0, 0, 0),3vh 1.5vh #222,4.5vh 1.5vh #222,6vh 1.5vh #222,7.5vh 1.5vh #222,9vh 1.5vh #222,10.5vh 1.5vh #222,12vh 1.5vh #222,13.5vh 1.5vh #222,15vh 1.5vh #222,16.5vh 1.5vh #222,18vh 1.5vh #222,19.5vh 1.5vh #222,21vh 1.5vh rgba(0, 0, 0, 0),1.5vh 3vh #222,3vh 3vh #222,4.5vh 3vh #222,6vh 3vh #222,7.5vh 3vh #222,9vh 3vh #222,10.5vh 3vh #222,12vh 3vh #222,13.5vh 3vh #222,15vh 3vh #222,16.5vh 3vh #222,18vh 3vh #222,19.5vh 3vh #222,21vh 3vh #222,1.5vh 4.5vh #222,3vh 4.5vh #222,4.5vh 4.5vh #222,6vh 4.5vh #222,7.5vh 4.5vh #222,9vh 4.5vh #222,10.5vh 4.5vh #222,12vh 4.5vh #222,13.5vh 4.5vh #222,15vh 4.5vh #222,16.5vh 4.5vh #222,18vh 4.5vh #222,19.5vh 4.5vh #222,21vh 4.5vh #222,1.5vh 6vh #222,3vh 6vh #222,4.5vh 6vh #222,6vh 6vh #222,7.5vh 6vh #222,9vh 6vh #347c54,10.5vh 6vh #347c54,12vh 6vh #347c54,13.5vh 6vh #347c54,15vh 6vh #347c54,16.5vh 6vh #222,18vh 6vh #222,19.5vh 6vh #222,21vh 6vh #222,1.5vh 7.5vh #222,3vh 7.5vh #222,4.5vh 7.5vh #222,6vh 7.5vh #347c54,7.5vh 7.5vh #347c54,9vh 7.5vh #6c6,10.5vh 7.5vh #6c6,12vh 7.5vh #6c6,13.5vh 7.5vh #6c6,15vh 7.5vh #6c6,16.5vh 7.5vh #347c54,18vh 7.5vh #347c54,19.5vh 7.5vh #222,21vh 7.5vh #222,1.5vh 9vh #222,3vh 9vh #222,4.5vh 9vh #222,6vh 9vh #347c54,7.5vh 9vh #6c6,9vh 9vh #6c6,10.5vh 9vh #6c6,12vh 9vh #6c6,13.5vh 9vh #6c6,15vh 9vh #6c6,16.5vh 9vh #6c6,18vh 9vh #6c6,19.5vh 9vh #347c54,21vh 9vh #222,1.5vh 10.5vh #222,3vh 10.5vh #222,4.5vh 10.5vh #347c54,6vh 10.5vh #6c6,7.5vh 10.5vh #347c54,9vh 10.5vh #6c6,10.5vh 10.5vh #6c6,12vh 10.5vh #6c6,13.5vh 10.5vh #6c6,15vh 10.5vh #6c6,16.5vh 10.5vh #6c6,18vh 10.5vh #347c54,19.5vh 10.5vh #347c54,21vh 10.5vh #222,1.5vh 12vh rgba(0, 0, 0, 0),3vh 12vh #222,4.5vh 12vh #347c54,6vh 12vh #6c6,7.5vh 12vh #6c6,9vh 12vh #6c6,10.5vh 12vh #6c6,12vh 12vh #6c6,13.5vh 12vh #6c6,15vh 12vh #6c6,16.5vh 12vh #6c6,18vh 12vh #6c6,19.5vh 12vh #222,21vh 12vh rgba(0, 0, 0, 0),1.5vh 13.5vh rgba(0, 0, 0, 0),3vh 13.5vh #222,4.5vh 13.5vh #347c54,6vh 13.5vh #633,7.5vh 13.5vh #633,9vh 13.5vh #633,10.5vh 13.5vh #633,12vh 13.5vh #6c6,13.5vh 13.5vh #633,15vh 13.5vh #633,16.5vh 13.5vh #633,18vh 13.5vh #633,19.5vh 13.5vh #222,21vh 13.5vh rgba(0, 0, 0, 0),1.5vh 15vh rgba(0, 0, 0, 0),3vh 15vh rgba(0, 0, 0, 0),4.5vh 15vh #222,6vh 15vh #347c54,7.5vh 15vh #347c54,9vh 15vh #222,10.5vh 15vh #347c54,12vh 15vh #6c6,13.5vh 15vh #6c6,15vh 15vh #347c54,16.5vh 15vh #222,18vh 15vh #347c54,19.5vh 15vh #222,21vh 15vh rgba(0, 0, 0, 0),1.5vh 16.5vh rgba(0, 0, 0, 0),3vh 16.5vh rgba(0, 0, 0, 0),4.5vh 16.5vh #222,6vh 16.5vh #347c54,7.5vh 16.5vh #6c6,9vh 16.5vh #6c6,10.5vh 16.5vh #6c6,12vh 16.5vh #6c6,13.5vh 16.5vh #6c6,15vh 16.5vh #6c6,16.5vh 16.5vh #6c6,18vh 16.5vh #6c6,19.5vh 16.5vh #222,21vh 16.5vh rgba(0, 0, 0, 0),1.5vh 18vh rgba(0, 0, 0, 0),3vh 18vh #999,4.5vh 18vh #999,6vh 18vh #347c54,7.5vh 18vh #347c54,9vh 18vh #6c6,10.5vh 18vh #222,12vh 18vh #222,13.5vh 18vh #222,15vh 18vh #222,16.5vh 18vh #6c6,18vh 18vh #347c54,19.5vh 18vh #999,21vh 18vh #999,1.5vh 19.5vh rgba(0, 0, 0, 0),3vh 19.5vh rgba(0, 0, 0, 0),4.5vh 19.5vh #222,6vh 19.5vh #347c54,7.5vh 19.5vh #347c54,9vh 19.5vh #347c54,10.5vh 19.5vh #6c6,12vh 19.5vh #6c6,13.5vh 19.5vh #6c6,15vh 19.5vh #6c6,16.5vh 19.5vh #347c54,18vh 19.5vh #222,19.5vh 19.5vh rgba(0, 0, 0, 0),21vh 19.5vh rgba(0, 0, 0, 0),1.5vh 21vh rgba(0, 0, 0, 0),3vh 21vh rgba(0, 0, 0, 0),4.5vh 21vh #222,6vh 21vh #222,7.5vh 21vh #222,9vh 21vh #222,10.5vh 21vh #347c54,12vh 21vh #6c6,13.5vh 21vh #6c6,15vh 21vh #222,16.5vh 21vh #222,18vh 21vh #222,19.5vh 21vh rgba(0, 0, 0, 0),21vh 21vh rgba(0, 0, 0, 0),1.5vh 22.5vh rgba(0, 0, 0, 0),3vh 22.5vh #222,4.5vh 22.5vh #633,6vh 22.5vh #633,7.5vh 22.5vh #633,9vh 22.5vh #633,10.5vh 22.5vh #222,12vh 22.5vh #222,13.5vh 22.5vh #222,15vh 22.5vh #633,16.5vh 22.5vh #633,18vh 22.5vh #633,19.5vh 22.5vh #222,21vh 22.5vh rgba(0, 0, 0, 0),1.5vh 24vh #222,3vh 24vh #633,4.5vh 24vh #222,6vh 24vh #633,7.5vh 24vh #633,9vh 24vh #633,10.5vh 24vh #f5f5dc,12vh 24vh #f5f5dc,13.5vh 24vh #f5f5dc,15vh 24vh #633,16.5vh 24vh #633,18vh 24vh #222,19.5vh 24vh #633,21vh 24vh #222,1.5vh 25.5vh #222,3vh 25.5vh #633,4.5vh 25.5vh #222,6vh 25.5vh #633,7.5vh 25.5vh #633,9vh 25.5vh #633,10.5vh 25.5vh #f5f5dc,12vh 25.5vh #f5f5dc,13.5vh 25.5vh #f5f5dc,15vh 25.5vh #633,16.5vh 25.5vh #633,18vh 25.5vh #222,19.5vh 25.5vh #633,21vh 25.5vh #222,1.5vh 27vh #222,3vh 27vh #347c54,4.5vh 27vh #222,6vh 27vh #633,7.5vh 27vh #633,9vh 27vh #633,10.5vh 27vh #f5f5dc,12vh 27vh #f5f5dc,13.5vh 27vh #f5f5dc,15vh 27vh #633,16.5vh 27vh #633,18vh 27vh #222,19.5vh 27vh #347c54,21vh 27vh #222,1.5vh 28.5vh rgba(0, 0, 0, 0),3vh 28.5vh #222,4.5vh 28.5vh #222,6vh 28.5vh #633,7.5vh 28.5vh #633,9vh 28.5vh #222,10.5vh 28.5vh #222,12vh 28.5vh #222,13.5vh 28.5vh #222,15vh 28.5vh #633,16.5vh 28.5vh #633,18vh 28.5vh #222,19.5vh 28.5vh #222,21vh 28.5vh rgba(0, 0, 0, 0),1.5vh 30vh rgba(0, 0, 0, 0),3vh 30vh rgba(0, 0, 0, 0),4.5vh 30vh #222,6vh 30vh #633,7.5vh 30vh #999,9vh 30vh #999,10.5vh 30vh #999,12vh 30vh #999,13.5vh 30vh #999,15vh 30vh #999,16.5vh 30vh #633,18vh 30vh #222,19.5vh 30vh rgba(0, 0, 0, 0),21vh 30vh rgba(0, 0, 0, 0),1.5vh 31.5vh rgba(0, 0, 0, 0),3vh 31.5vh rgba(0, 0, 0, 0),4.5vh 31.5vh #222,6vh 31.5vh #999,7.5vh 31.5vh #999,9vh 31.5vh #999,10.5vh 31.5vh #222,12vh 31.5vh #222,13.5vh 31.5vh #999,15vh 31.5vh #999,16.5vh 31.5vh #999,18vh 31.5vh #222,19.5vh 31.5vh rgba(0, 0, 0, 0),21vh 31.5vh rgba(0, 0, 0, 0),1.5vh 33vh rgba(0, 0, 0, 0),3vh 33vh rgba(0, 0, 0, 0),4.5vh 33vh #222,6vh 33vh #222,7.5vh 33vh #222,9vh 33vh #222,10.5vh 33vh rgba(0, 0, 0, 0),12vh 33vh rgba(0, 0, 0, 0),13.5vh 33vh #222,15vh 33vh #222,16.5vh 33vh #222,18vh 33vh #222,19.5vh 33vh rgba(0, 0, 0, 0),21vh 33vh rgba(0, 0, 0, 0),1.5vh 34.5vh rgba(0, 0, 0, 0),3vh 34.5vh rgba(0, 0, 0, 0),4.5vh 34.5vh #222,6vh 34.5vh #222,7.5vh 34.5vh #222,9vh 34.5vh #222,10.5vh 34.5vh rgba(0, 0, 0, 0),12vh 34.5vh rgba(0, 0, 0, 0),13.5vh 34.5vh #222,15vh 34.5vh #222,16.5vh 34.5vh #222,18vh 34.5vh #222,19.5vh 34.5vh rgba(0, 0, 0, 0),21vh 34.5vh rgba(0, 0, 0, 0);
+}
+ .pixel-art--zombie {
+	 position: relative;
+	 width: 21vh;
+	 height: 34.5vh;
+}
+ .pixel-art--zombie:after {
+	 content: '';
+	 position: absolute;
+	 top: -1.5vh;
+	 left: -1.5vh;
+	 width: 1.5vh;
+	 height: 1.5vh;
+	 box-shadow: 1.5vh 1.5vh rgba(0, 0, 0, 0),3vh 1.5vh rgba(0, 0, 0, 0),4.5vh 1.5vh rgba(0, 0, 0, 0),6vh 1.5vh rgba(0, 0, 0, 0),7.5vh 1.5vh rgba(0, 0, 0, 0),9vh 1.5vh rgba(0, 0, 0, 0),10.5vh 1.5vh rgba(0, 0, 0, 0),12vh 1.5vh rgba(0, 0, 0, 0),13.5vh 1.5vh rgba(0, 0, 0, 0),15vh 1.5vh rgba(0, 0, 0, 0),16.5vh 1.5vh rgba(0, 0, 0, 0),18vh 1.5vh #222,19.5vh 1.5vh #222,21vh 1.5vh #222,1.5vh 3vh rgba(0, 0, 0, 0),3vh 3vh rgba(0, 0, 0, 0),4.5vh 3vh rgba(0, 0, 0, 0),6vh 3vh rgba(0, 0, 0, 0),7.5vh 3vh rgba(0, 0, 0, 0),9vh 3vh rgba(0, 0, 0, 0),10.5vh 3vh rgba(0, 0, 0, 0),12vh 3vh rgba(0, 0, 0, 0),13.5vh 3vh rgba(0, 0, 0, 0),15vh 3vh #222,16.5vh 3vh #222,18vh 3vh #222,19.5vh 3vh #222,21vh 3vh #222,22.5vh 3vh #222,1.5vh 4.5vh rgba(0, 0, 0, 0),3vh 4.5vh rgba(0, 0, 0, 0),4.5vh 4.5vh rgba(0, 0, 0, 0),6vh 4.5vh rgba(0, 0, 0, 0),7.5vh 4.5vh #222,9vh 4.5vh #222,10.5vh 4.5vh #222,12vh 4.5vh #222,13.5vh 4.5vh #222,15vh 4.5vh #222,16.5vh 4.5vh #222,18vh 4.5vh #222,19.5vh 4.5vh #222,21vh 4.5vh #222,22.5vh 4.5vh #222,1.5vh 6vh rgba(0, 0, 0, 0),3vh 6vh rgba(0, 0, 0, 0),4.5vh 6vh #222,6vh 6vh #222,7.5vh 6vh #222,9vh 6vh #222,10.5vh 6vh #222,12vh 6vh #222,13.5vh 6vh #222,15vh 6vh #222,16.5vh 6vh #222,18vh 6vh #222,19.5vh 6vh #222,21vh 6vh #222,22.5vh 6vh #222,1.5vh 7.5vh rgba(0, 0, 0, 0),3vh 7.5vh #222,4.5vh 7.5vh #222,6vh 7.5vh #222,7.5vh 7.5vh #222,9vh 7.5vh #cae4e1,10.5vh 7.5vh #cae4e1,12vh 7.5vh #cae4e1,13.5vh 7.5vh #222,15vh 7.5vh #222,16.5vh 7.5vh #bfbfbf,18vh 7.5vh #bfbfbf,19.5vh 7.5vh #222,21vh 7.5vh #222,1.5vh 9vh rgba(0, 0, 0, 0),3vh 9vh #222,4.5vh 9vh #222,6vh 9vh #222,7.5vh 9vh #cae4e1,9vh 9vh #cae4e1,10.5vh 9vh #cae4e1,12vh 9vh #cae4e1,13.5vh 9vh #cae4e1,15vh 9vh #222,16.5vh 9vh #222,18vh 9vh #222,19.5vh 9vh #bfbfbf,21vh 9vh #222,1.5vh 10.5vh rgba(0, 0, 0, 0),3vh 10.5vh #222,4.5vh 10.5vh #222,6vh 10.5vh #cae4e1,7.5vh 10.5vh #f00,9vh 10.5vh #cae4e1,10.5vh 10.5vh #cae4e1,12vh 10.5vh #cae4e1,13.5vh 10.5vh #cae4e1,15vh 10.5vh #cae4e1,16.5vh 10.5vh #cae4e1,18vh 10.5vh #222,19.5vh 10.5vh #222,21vh 10.5vh #222,1.5vh 12vh rgba(0, 0, 0, 0),3vh 12vh #222,4.5vh 12vh #222,6vh 12vh #cae4e1,7.5vh 12vh #cae4e1,9vh 12vh #cae4e1,10.5vh 12vh #cae4e1,12vh 12vh #cae4e1,13.5vh 12vh #cae4e1,15vh 12vh #cae4e1,16.5vh 12vh #cae4e1,18vh 12vh #cae4e1,19.5vh 12vh #222,21vh 12vh rgba(0, 0, 0, 0),1.5vh 13.5vh rgba(0, 0, 0, 0),3vh 13.5vh #222,4.5vh 13.5vh #222,6vh 13.5vh #fff,7.5vh 13.5vh #fff,9vh 13.5vh #fff,10.5vh 13.5vh #fff,12vh 13.5vh #cae4e1,13.5vh 13.5vh #fff,15vh 13.5vh #fff,16.5vh 13.5vh #fff,18vh 13.5vh #fff,19.5vh 13.5vh #222,21vh 13.5vh rgba(0, 0, 0, 0),1.5vh 15vh rgba(0, 0, 0, 0),3vh 15vh rgba(0, 0, 0, 0),4.5vh 15vh #222,6vh 15vh #222,7.5vh 15vh #97cac4,9vh 15vh #222,10.5vh 15vh #97cac4,12vh 15vh #cae4e1,13.5vh 15vh #cae4e1,15vh 15vh #97cac4,16.5vh 15vh #222,18vh 15vh #97cac4,19.5vh 15vh #222,21vh 15vh rgba(0, 0, 0, 0),1.5vh 16.5vh rgba(0, 0, 0, 0),3vh 16.5vh rgba(0, 0, 0, 0),4.5vh 16.5vh #222,6vh 16.5vh #97cac4,7.5vh 16.5vh #222,9vh 16.5vh #cae4e1,10.5vh 16.5vh #cae4e1,12vh 16.5vh #cae4e1,13.5vh 16.5vh #cae4e1,15vh 16.5vh #cae4e1,16.5vh 16.5vh #cae4e1,18vh 16.5vh #cae4e1,19.5vh 16.5vh #222,21vh 16.5vh rgba(0, 0, 0, 0),1.5vh 18vh rgba(0, 0, 0, 0),3vh 18vh rgba(0, 0, 0, 0),4.5vh 18vh rgba(0, 0, 0, 0),6vh 18vh #97cac4,7.5vh 18vh #222,9vh 18vh #cae4e1,10.5vh 18vh #222,12vh 18vh #222,13.5vh 18vh #222,15vh 18vh #222,16.5vh 18vh #cae4e1,18vh 18vh #97cac4,19.5vh 18vh rgba(0, 0, 0, 0),21vh 18vh rgba(0, 0, 0, 0),1.5vh 19.5vh rgba(0, 0, 0, 0),3vh 19.5vh rgba(0, 0, 0, 0),4.5vh 19.5vh #222,6vh 19.5vh #97cac4,7.5vh 19.5vh #97cac4,9vh 19.5vh #97cac4,10.5vh 19.5vh #cae4e1,12vh 19.5vh #cae4e1,13.5vh 19.5vh #cae4e1,15vh 19.5vh #f00,16.5vh 19.5vh #97cac4,18vh 19.5vh #222,19.5vh 19.5vh rgba(0, 0, 0, 0),21vh 19.5vh rgba(0, 0, 0, 0),1.5vh 21vh rgba(0, 0, 0, 0),3vh 21vh rgba(0, 0, 0, 0),4.5vh 21vh #222,6vh 21vh #222,7.5vh 21vh #222,9vh 21vh #222,10.5vh 21vh #97cac4,12vh 21vh #cae4e1,13.5vh 21vh #cae4e1,15vh 21vh #222,16.5vh 21vh #222,18vh 21vh #222,19.5vh 21vh rgba(0, 0, 0, 0),21vh 21vh rgba(0, 0, 0, 0),1.5vh 22.5vh rgba(0, 0, 0, 0),3vh 22.5vh #222,4.5vh 22.5vh #fff,6vh 22.5vh #222,7.5vh 22.5vh #fff,9vh 22.5vh #fff,10.5vh 22.5vh #222,12vh 22.5vh #222,13.5vh 22.5vh #222,15vh 22.5vh #fff,16.5vh 22.5vh #fff,18vh 22.5vh #fff,19.5vh 22.5vh #222,21vh 22.5vh #222,22.5vh 22.5vh #222,1.5vh 24vh #222,3vh 24vh #fff,4.5vh 24vh #fff,6vh 24vh #97cac4,7.5vh 24vh #222,9vh 24vh #fff,10.5vh 24vh #b30000,12vh 24vh #d9d9d9,13.5vh 24vh #b30000,15vh 24vh #fff,16.5vh 24vh #fff,18vh 24vh #fff,19.5vh 24vh #fff,21vh 24vh #fff,22.5vh 24vh #97cac4,24vh 24vh #222,1.5vh 25.5vh rgba(0, 0, 0, 0),3vh 25.5vh #222,4.5vh 25.5vh #222,6vh 25.5vh #222,7.5vh 25.5vh #fff,9vh 25.5vh #fff,10.5vh 25.5vh #b30000,12vh 25.5vh #d9d9d9,13.5vh 25.5vh #b30000,15vh 25.5vh #fff,16.5vh 25.5vh #fff,18vh 25.5vh #222,19.5vh 25.5vh #222,21vh 25.5vh #222,22.5vh 25.5vh #222,1.5vh 27vh rgba(0, 0, 0, 0),3vh 27vh rgba(0, 0, 0, 0),4.5vh 27vh #222,6vh 27vh #fff,7.5vh 27vh #fff,9vh 27vh #fff,10.5vh 27vh #b30000,12vh 27vh #d9d9d9,13.5vh 27vh #b30000,15vh 27vh #fff,16.5vh 27vh #fff,18vh 27vh #222,19.5vh 27vh rgba(0, 0, 0, 0),21vh 27vh rgba(0, 0, 0, 0),1.5vh 28.5vh rgba(0, 0, 0, 0),3vh 28.5vh rgba(0, 0, 0, 0),4.5vh 28.5vh #222,6vh 28.5vh #fff,7.5vh 28.5vh #fff,9vh 28.5vh #222,10.5vh 28.5vh #222,12vh 28.5vh #222,13.5vh 28.5vh #222,15vh 28.5vh #fff,16.5vh 28.5vh #fff,18vh 28.5vh #222,19.5vh 28.5vh rgba(0, 0, 0, 0),21vh 28.5vh rgba(0, 0, 0, 0),1.5vh 30vh rgba(0, 0, 0, 0),3vh 30vh rgba(0, 0, 0, 0),4.5vh 30vh #222,6vh 30vh #fff,7.5vh 30vh #b30000,9vh 30vh #bfbfbf,10.5vh 30vh #bfbfbf,12vh 30vh #bfbfbf,13.5vh 30vh #bfbfbf,15vh 30vh #b30000,16.5vh 30vh #fff,18vh 30vh #222,19.5vh 30vh rgba(0, 0, 0, 0),21vh 30vh rgba(0, 0, 0, 0),1.5vh 31.5vh rgba(0, 0, 0, 0),3vh 31.5vh rgba(0, 0, 0, 0),4.5vh 31.5vh #222,6vh 31.5vh #b30000,7.5vh 31.5vh #bfbfbf,9vh 31.5vh #bfbfbf,10.5vh 31.5vh #222,12vh 31.5vh #222,13.5vh 31.5vh #bfbfbf,15vh 31.5vh #bfbfbf,16.5vh 31.5vh #b30000,18vh 31.5vh #222,19.5vh 31.5vh rgba(0, 0, 0, 0),21vh 31.5vh rgba(0, 0, 0, 0),1.5vh 33vh rgba(0, 0, 0, 0),3vh 33vh rgba(0, 0, 0, 0),4.5vh 33vh #222,6vh 33vh #222,7.5vh 33vh #222,9vh 33vh #222,10.5vh 33vh rgba(0, 0, 0, 0),12vh 33vh rgba(0, 0, 0, 0),13.5vh 33vh #222,15vh 33vh #222,16.5vh 33vh #222,18vh 33vh #222,19.5vh 33vh rgba(0, 0, 0, 0),21vh 33vh rgba(0, 0, 0, 0),1.5vh 34.5vh rgba(0, 0, 0, 0),3vh 34.5vh rgba(0, 0, 0, 0),4.5vh 34.5vh #222,6vh 34.5vh #222,7.5vh 34.5vh #222,9vh 34.5vh #222,10.5vh 34.5vh rgba(0, 0, 0, 0),12vh 34.5vh rgba(0, 0, 0, 0),13.5vh 34.5vh #222,15vh 34.5vh #222,16.5vh 34.5vh #222,18vh 34.5vh #222,19.5vh 34.5vh rgba(0, 0, 0, 0),21vh 34.5vh rgba(0, 0, 0, 0);
+}
+ .pixel-art--dracula {
+	 position: relative;
+	 width: 21vh;
+	 height: 30vh;
+}
+ .pixel-art--dracula:after {
+	 content: '';
+	 position: absolute;
+	 top: -1.5vh;
+	 left: -1.5vh;
+	 width: 1.5vh;
+	 height: 1.5vh;
+	 box-shadow: 1.5vh 1.5vh rgba(0, 0, 0, 0),3vh 1.5vh rgba(0, 0, 0, 0),4.5vh 1.5vh rgba(0, 0, 0, 0),6vh 1.5vh rgba(0, 0, 0, 0),7.5vh 1.5vh #000,9vh 1.5vh #000,10.5vh 1.5vh #000,12vh 1.5vh #000,13.5vh 1.5vh #000,15vh 1.5vh #000,16.5vh 1.5vh rgba(0, 0, 0, 0),18vh 1.5vh rgba(0, 0, 0, 0),19.5vh 1.5vh rgba(0, 0, 0, 0),21vh 1.5vh rgba(0, 0, 0, 0),1.5vh 3vh rgba(0, 0, 0, 0),3vh 3vh rgba(0, 0, 0, 0),4.5vh 3vh rgba(0, 0, 0, 0),6vh 3vh #000,7.5vh 3vh #000,9vh 3vh #000,10.5vh 3vh #000,12vh 3vh #000,13.5vh 3vh #000,15vh 3vh #000,16.5vh 3vh #000,18vh 3vh rgba(0, 0, 0, 0),19.5vh 3vh rgba(0, 0, 0, 0),21vh 3vh rgba(0, 0, 0, 0),1.5vh 4.5vh rgba(0, 0, 0, 0),3vh 4.5vh rgba(0, 0, 0, 0),4.5vh 4.5vh #000,6vh 4.5vh #000,7.5vh 4.5vh #000,9vh 4.5vh #000,10.5vh 4.5vh #000,12vh 4.5vh #000,13.5vh 4.5vh #000,15vh 4.5vh #000,16.5vh 4.5vh #000,18vh 4.5vh #000,19.5vh 4.5vh rgba(0, 0, 0, 0),21vh 4.5vh rgba(0, 0, 0, 0),1.5vh 6vh rgba(0, 0, 0, 0),3vh 6vh #000,4.5vh 6vh #000,6vh 6vh #000,7.5vh 6vh #ffc,9vh 6vh #ffc,10.5vh 6vh #000,12vh 6vh #000,13.5vh 6vh #000,15vh 6vh #000,16.5vh 6vh #ffc,18vh 6vh #000,19.5vh 6vh #000,21vh 6vh rgba(0, 0, 0, 0),1.5vh 7.5vh rgba(0, 0, 0, 0),3vh 7.5vh #000,4.5vh 7.5vh #000,6vh 7.5vh #ffc,7.5vh 7.5vh #ffc,9vh 7.5vh #ffc,10.5vh 7.5vh #ffc,12vh 7.5vh #000,13.5vh 7.5vh #000,15vh 7.5vh #ffc,16.5vh 7.5vh #ffc,18vh 7.5vh #ffc,19.5vh 7.5vh #000,21vh 7.5vh rgba(0, 0, 0, 0),1.5vh 9vh rgba(0, 0, 0, 0),3vh 9vh #000,4.5vh 9vh #000,6vh 9vh #ffc,7.5vh 9vh #ffc,9vh 9vh #ffc,10.5vh 9vh #ffc,12vh 9vh #ffc,13.5vh 9vh #ffc,15vh 9vh #ffc,16.5vh 9vh #ffc,18vh 9vh #ffc,19.5vh 9vh #000,21vh 9vh rgba(0, 0, 0, 0),1.5vh 10.5vh rgba(0, 0, 0, 0),3vh 10.5vh rgba(0, 0, 0, 0),4.5vh 10.5vh #000,6vh 10.5vh #ffc,7.5vh 10.5vh #ffc,9vh 10.5vh #ffc,10.5vh 10.5vh #ffc,12vh 10.5vh #ffc,13.5vh 10.5vh #ffc,15vh 10.5vh #ffc,16.5vh 10.5vh #ffc,18vh 10.5vh #ffc,19.5vh 10.5vh #000,21vh 10.5vh rgba(0, 0, 0, 0),1.5vh 12vh rgba(0, 0, 0, 0),3vh 12vh rgba(0, 0, 0, 0),4.5vh 12vh #000,6vh 12vh #ffc,7.5vh 12vh #ffc,9vh 12vh #666,10.5vh 12vh #ffc,12vh 12vh #ffc,13.5vh 12vh #ffc,15vh 12vh #ffc,16.5vh 12vh #666,18vh 12vh #ffc,19.5vh 12vh #000,21vh 12vh rgba(0, 0, 0, 0),1.5vh 13.5vh #000,3vh 13.5vh #000,4.5vh 13.5vh #000,6vh 13.5vh #ffc,7.5vh 13.5vh #ffc,9vh 13.5vh #ffc,10.5vh 13.5vh #ffc,12vh 13.5vh #ffc,13.5vh 13.5vh #ffc,15vh 13.5vh #ffc,16.5vh 13.5vh #ffc,18vh 13.5vh #ffc,19.5vh 13.5vh #000,21vh 13.5vh #000,22.5vh 13.5vh #000,1.5vh 15vh #000,3vh 15vh #666,4.5vh 15vh #000,6vh 15vh #ffc,7.5vh 15vh #ffc,9vh 15vh #ffc,10.5vh 15vh #900,12vh 15vh #000,13.5vh 15vh #000,15vh 15vh #900,16.5vh 15vh #ffc,18vh 15vh #ffc,19.5vh 15vh #000,21vh 15vh #666,22.5vh 15vh #000,1.5vh 16.5vh rgba(0, 0, 0, 0),3vh 16.5vh #000,4.5vh 16.5vh #666,6vh 16.5vh #000,7.5vh 16.5vh #ffc,9vh 16.5vh #ffc,10.5vh 16.5vh #900,12vh 16.5vh #ffc,13.5vh 16.5vh #ffc,15vh 16.5vh #ffc,16.5vh 16.5vh #ffc,18vh 16.5vh #000,19.5vh 16.5vh #000,21vh 16.5vh #666,22.5vh 16.5vh #000,1.5vh 18vh rgba(0, 0, 0, 0),3vh 18vh rgba(0, 0, 0, 0),4.5vh 18vh #000,6vh 18vh #666,7.5vh 18vh #000,9vh 18vh #ffc,10.5vh 18vh #ffc,12vh 18vh #ffc,13.5vh 18vh #ffc,15vh 18vh #ffc,16.5vh 18vh #000,18vh 18vh #000,19.5vh 18vh #666,21vh 18vh #000,1.5vh 19.5vh rgba(0, 0, 0, 0),3vh 19.5vh #000,4.5vh 19.5vh #666,6vh 19.5vh #666,7.5vh 19.5vh #666,9vh 19.5vh #000,10.5vh 19.5vh #000,12vh 19.5vh #000,13.5vh 19.5vh #000,15vh 19.5vh #000,16.5vh 19.5vh #666,18vh 19.5vh #666,19.5vh 19.5vh #000,21vh 19.5vh rgba(0, 0, 0, 0),1.5vh 21vh #000,3vh 21vh #666,4.5vh 21vh #000,6vh 21vh #666,7.5vh 21vh #666,9vh 21vh #666,10.5vh 21vh #666,12vh 21vh #c60,13.5vh 21vh #666,15vh 21vh #666,16.5vh 21vh #666,18vh 21vh #000,19.5vh 21vh #666,21vh 21vh #000,1.5vh 22.5vh #000,3vh 22.5vh #666,4.5vh 22.5vh #000,6vh 22.5vh #666,7.5vh 22.5vh #666,9vh 22.5vh #666,10.5vh 22.5vh #666,12vh 22.5vh #fff,13.5vh 22.5vh #666,15vh 22.5vh #666,16.5vh 22.5vh #666,18vh 22.5vh #000,19.5vh 22.5vh #666,21vh 22.5vh #000,1.5vh 24vh #000,3vh 24vh #ffc,4.5vh 24vh #000,6vh 24vh #666,7.5vh 24vh #666,9vh 24vh #000,10.5vh 24vh #fff,12vh 24vh #fff,13.5vh 24vh #fff,15vh 24vh #000,16.5vh 24vh #666,18vh 24vh #000,19.5vh 24vh #ffc,21vh 24vh #000,1.5vh 25.5vh rgba(0, 0, 0, 0),3vh 25.5vh #000,4.5vh 25.5vh #000,6vh 25.5vh #fff,7.5vh 25.5vh #000,9vh 25.5vh #fff,10.5vh 25.5vh #fff,12vh 25.5vh #fff,13.5vh 25.5vh #fff,15vh 25.5vh #fff,16.5vh 25.5vh #000,18vh 25.5vh #000,19.5vh 25.5vh #000,21vh 25.5vh rgba(0, 0, 0, 0),1.5vh 27vh rgba(0, 0, 0, 0),3vh 27vh rgba(0, 0, 0, 0),4.5vh 27vh #000,6vh 27vh #000,7.5vh 27vh #000,9vh 27vh #000,10.5vh 27vh #000,12vh 27vh #000,13.5vh 27vh #000,15vh 27vh #000,16.5vh 27vh #000,18vh 27vh #000,19.5vh 27vh rgba(0, 0, 0, 0),21vh 27vh rgba(0, 0, 0, 0),1.5vh 28.5vh rgba(0, 0, 0, 0),3vh 28.5vh rgba(0, 0, 0, 0),4.5vh 28.5vh #000,6vh 28.5vh #000,7.5vh 28.5vh #000,9vh 28.5vh #000,10.5vh 28.5vh #000,12vh 28.5vh #000,13.5vh 28.5vh #000,15vh 28.5vh #000,16.5vh 28.5vh #000,18vh 28.5vh #000,19.5vh 28.5vh rgba(0, 0, 0, 0),21vh 28.5vh rgba(0, 0, 0, 0),1.5vh 30vh rgba(0, 0, 0, 0),3vh 30vh rgba(0, 0, 0, 0),4.5vh 30vh #000,6vh 30vh #000,7.5vh 30vh #000,9vh 30vh #000,10.5vh 30vh rgba(0, 0, 0, 0),12vh 30vh rgba(0, 0, 0, 0),13.5vh 30vh #000,15vh 30vh #000,16.5vh 30vh #000,18vh 30vh #000,19.5vh 30vh rgba(0, 0, 0, 0),21vh 30vh rgba(0, 0, 0, 0);
+}
+ .pixel-art--werewolf {
+	 position: relative;
+	 width: 24vh;
+	 height: 33vh;
+}
+ .pixel-art--werewolf:after {
+	 content: '';
+	 position: absolute;
+	 top: -1.5vh;
+	 left: -1.5vh;
+	 width: 1.5vh;
+	 height: 1.5vh;
+	 box-shadow: 1.5vh 1.5vh rgba(0, 0, 0, 0),3vh 1.5vh rgba(0, 0, 0, 0),4.5vh 1.5vh rgba(0, 0, 0, 0),6vh 1.5vh rgba(0, 0, 0, 0),7.5vh 1.5vh rgba(0, 0, 0, 0),9vh 1.5vh rgba(0, 0, 0, 0),10.5vh 1.5vh rgba(0, 0, 0, 0),12vh 1.5vh rgba(0, 0, 0, 0),13.5vh 1.5vh rgba(0, 0, 0, 0),15vh 1.5vh rgba(0, 0, 0, 0),16.5vh 1.5vh rgba(0, 0, 0, 0),18vh 1.5vh rgba(0, 0, 0, 0),19.5vh 1.5vh rgba(0, 0, 0, 0),21vh 1.5vh rgba(0, 0, 0, 0),22.5vh 1.5vh rgba(0, 0, 0, 0),24vh 1.5vh rgba(0, 0, 0, 0),1.5vh 3vh #333,3vh 3vh #333,4.5vh 3vh rgba(0, 0, 0, 0),6vh 3vh rgba(0, 0, 0, 0),7.5vh 3vh rgba(0, 0, 0, 0),9vh 3vh rgba(0, 0, 0, 0),10.5vh 3vh rgba(0, 0, 0, 0),12vh 3vh rgba(0, 0, 0, 0),13.5vh 3vh rgba(0, 0, 0, 0),15vh 3vh rgba(0, 0, 0, 0),16.5vh 3vh rgba(0, 0, 0, 0),18vh 3vh rgba(0, 0, 0, 0),19.5vh 3vh rgba(0, 0, 0, 0),21vh 3vh rgba(0, 0, 0, 0),22.5vh 3vh #333,24vh 3vh #333,1.5vh 4.5vh #333,3vh 4.5vh #966,4.5vh 4.5vh #333,6vh 4.5vh rgba(0, 0, 0, 0),7.5vh 4.5vh rgba(0, 0, 0, 0),9vh 4.5vh rgba(0, 0, 0, 0),10.5vh 4.5vh #333,12vh 4.5vh #333,13.5vh 4.5vh #333,15vh 4.5vh #333,16.5vh 4.5vh #333,18vh 4.5vh rgba(0, 0, 0, 0),19.5vh 4.5vh rgba(0, 0, 0, 0),21vh 4.5vh #333,22.5vh 4.5vh #633,24vh 4.5vh #333,1.5vh 6vh #333,3vh 6vh #966,4.5vh 6vh #633,6vh 6vh #333,7.5vh 6vh rgba(0, 0, 0, 0),9vh 6vh #333,10.5vh 6vh #633,12vh 6vh #633,13.5vh 6vh #633,15vh 6vh #633,16.5vh 6vh #633,18vh 6vh #333,19.5vh 6vh rgba(0, 0, 0, 0),21vh 6vh #333,22.5vh 6vh #966,24vh 6vh #333,1.5vh 7.5vh rgba(0, 0, 0, 0),3vh 7.5vh #333,4.5vh 7.5vh #966,6vh 7.5vh #966,7.5vh 7.5vh #333,9vh 7.5vh #633,10.5vh 7.5vh #633,12vh 7.5vh #633,13.5vh 7.5vh #633,15vh 7.5vh #633,16.5vh 7.5vh #633,18vh 7.5vh #633,19.5vh 7.5vh #333,21vh 7.5vh #966,22.5vh 7.5vh #966,24vh 7.5vh #333,1.5vh 9vh rgba(0, 0, 0, 0),3vh 9vh #333,4.5vh 9vh #633,6vh 9vh #633,7.5vh 9vh #633,9vh 9vh #966,10.5vh 9vh #966,12vh 9vh #966,13.5vh 9vh #633,15vh 9vh #633,16.5vh 9vh #966,18vh 9vh #966,19.5vh 9vh #633,21vh 9vh #633,22.5vh 9vh #333,24vh 9vh rgba(0, 0, 0, 0),1.5vh 10.5vh rgba(0, 0, 0, 0),3vh 10.5vh rgba(0, 0, 0, 0),4.5vh 10.5vh #333,6vh 10.5vh #633,7.5vh 10.5vh #966,9vh 10.5vh #633,10.5vh 10.5vh #966,12vh 10.5vh #966,13.5vh 10.5vh #966,15vh 10.5vh #966,16.5vh 10.5vh #966,18vh 10.5vh #966,19.5vh 10.5vh #633,21vh 10.5vh #633,22.5vh 10.5vh #333,24vh 10.5vh rgba(0, 0, 0, 0),1.5vh 12vh rgba(0, 0, 0, 0),3vh 12vh #333,4.5vh 12vh #633,6vh 12vh #633,7.5vh 12vh #633,9vh 12vh #333,10.5vh 12vh #633,12vh 12vh #966,13.5vh 12vh #966,15vh 12vh #966,16.5vh 12vh #966,18vh 12vh #633,19.5vh 12vh #333,21vh 12vh #633,22.5vh 12vh #633,24vh 12vh #333,1.5vh 13.5vh rgba(0, 0, 0, 0),3vh 13.5vh rgba(0, 0, 0, 0),4.5vh 13.5vh #333,6vh 13.5vh #633,7.5vh 13.5vh #966,9vh 13.5vh #633,10.5vh 13.5vh #333,12vh 13.5vh #633,13.5vh 13.5vh #966,15vh 13.5vh #966,16.5vh 13.5vh #633,18vh 13.5vh #333,19.5vh 13.5vh #633,21vh 13.5vh #633,22.5vh 13.5vh #333,24vh 13.5vh rgba(0, 0, 0, 0),1.5vh 15vh rgba(0, 0, 0, 0),3vh 15vh #333,4.5vh 15vh #333,6vh 15vh #633,7.5vh 15vh #633,9vh 15vh #966,10.5vh 15vh #ffd700,12vh 15vh #333,13.5vh 15vh #966,15vh 15vh #966,16.5vh 15vh #333,18vh 15vh #ffd700,19.5vh 15vh #966,21vh 15vh #633,22.5vh 15vh #633,24vh 15vh #333,1.5vh 16.5vh rgba(0, 0, 0, 0),3vh 16.5vh #333,4.5vh 16.5vh #633,6vh 16.5vh #633,7.5vh 16.5vh #966,9vh 16.5vh #966,10.5vh 16.5vh #966,12vh 16.5vh #966,13.5vh 16.5vh #966,15vh 16.5vh #966,16.5vh 16.5vh #966,18vh 16.5vh #966,19.5vh 16.5vh #966,21vh 16.5vh #633,22.5vh 16.5vh #633,24vh 16.5vh #333,1.5vh 18vh rgba(0, 0, 0, 0),3vh 18vh rgba(0, 0, 0, 0),4.5vh 18vh #333,6vh 18vh #633,7.5vh 18vh #633,9vh 18vh #966,10.5vh 18vh #966,12vh 18vh #fff,13.5vh 18vh #fff,15vh 18vh #fff,16.5vh 18vh #fff,18vh 18vh #966,19.5vh 18vh #633,21vh 18vh #333,22.5vh 18vh #333,24vh 18vh rgba(0, 0, 0, 0),1.5vh 19.5vh rgba(0, 0, 0, 0),3vh 19.5vh rgba(0, 0, 0, 0),4.5vh 19.5vh rgba(0, 0, 0, 0),6vh 19.5vh #333,7.5vh 19.5vh #333,9vh 19.5vh #333,10.5vh 19.5vh #633,12vh 19.5vh #966,13.5vh 19.5vh #966,15vh 19.5vh #966,16.5vh 19.5vh #966,18vh 19.5vh #333,19.5vh 19.5vh #333,21vh 19.5vh rgba(0, 0, 0, 0),22.5vh 19.5vh rgba(0, 0, 0, 0),24vh 19.5vh rgba(0, 0, 0, 0),1.5vh 21vh rgba(0, 0, 0, 0),3vh 21vh rgba(0, 0, 0, 0),4.5vh 21vh #333,6vh 21vh #666,7.5vh 21vh #666,9vh 21vh #666,10.5vh 21vh #333,12vh 21vh #633,13.5vh 21vh #966,15vh 21vh #633,16.5vh 21vh #333,18vh 21vh #666,19.5vh 21vh #633,21vh 21vh #333,22.5vh 21vh rgba(0, 0, 0, 0),24vh 21vh rgba(0, 0, 0, 0),1.5vh 22.5vh rgba(0, 0, 0, 0),3vh 22.5vh #333,4.5vh 22.5vh #633,6vh 22.5vh #333,7.5vh 22.5vh #666,9vh 22.5vh #666,10.5vh 22.5vh #666,12vh 22.5vh #333,13.5vh 22.5vh #633,15vh 22.5vh #333,16.5vh 22.5vh #666,18vh 22.5vh #666,19.5vh 22.5vh #333,21vh 22.5vh #633,22.5vh 22.5vh #333,24vh 22.5vh rgba(0, 0, 0, 0),1.5vh 24vh rgba(0, 0, 0, 0),3vh 24vh #333,4.5vh 24vh #633,6vh 24vh #333,7.5vh 24vh #666,9vh 24vh #666,10.5vh 24vh #666,12vh 24vh #666,13.5vh 24vh #333,15vh 24vh #666,16.5vh 24vh #666,18vh 24vh #666,19.5vh 24vh #333,21vh 24vh #633,22.5vh 24vh #333,24vh 24vh rgba(0, 0, 0, 0),1.5vh 25.5vh #333,3vh 25.5vh #633,4.5vh 25.5vh #633,6vh 25.5vh #333,7.5vh 25.5vh #666,9vh 25.5vh #666,10.5vh 25.5vh #666,12vh 25.5vh #666,13.5vh 25.5vh #666,15vh 25.5vh #666,16.5vh 25.5vh #666,18vh 25.5vh #666,19.5vh 25.5vh #333,21vh 25.5vh #633,22.5vh 25.5vh #633,24vh 25.5vh #333,1.5vh 27vh #333,3vh 27vh #633,4.5vh 27vh #333,6vh 27vh #333,7.5vh 27vh #666,9vh 27vh #666,10.5vh 27vh #966,12vh 27vh #666,13.5vh 27vh #966,15vh 27vh #966,16.5vh 27vh #666,18vh 27vh #666,19.5vh 27vh #333,21vh 27vh #333,22.5vh 27vh #633,24vh 27vh #333,1.5vh 28.5vh #333,3vh 28.5vh #966,4.5vh 28.5vh rgba(0, 0, 0, 0),6vh 28.5vh #333,7.5vh 28.5vh #633,9vh 28.5vh #666,10.5vh 28.5vh #966,12vh 28.5vh #966,13.5vh 28.5vh #966,15vh 28.5vh #966,16.5vh 28.5vh #966,18vh 28.5vh #666,19.5vh 28.5vh #333,21vh 28.5vh rgba(0, 0, 0, 0),22.5vh 28.5vh #966,24vh 28.5vh #333,1.5vh 30vh rgba(0, 0, 0, 0),3vh 30vh #fff,4.5vh 30vh rgba(0, 0, 0, 0),6vh 30vh #333,7.5vh 30vh #633,9vh 30vh #966,10.5vh 30vh #633,12vh 30vh #333,13.5vh 30vh #333,15vh 30vh #633,16.5vh 30vh #966,18vh 30vh #633,19.5vh 30vh #333,21vh 30vh rgba(0, 0, 0, 0),22.5vh 30vh #fff,24vh 30vh rgba(0, 0, 0, 0),1.5vh 31.5vh rgba(0, 0, 0, 0),3vh 31.5vh rgba(0, 0, 0, 0),4.5vh 31.5vh rgba(0, 0, 0, 0),6vh 31.5vh #333,7.5vh 31.5vh #633,9vh 31.5vh #966,10.5vh 31.5vh #633,12vh 31.5vh #333,13.5vh 31.5vh #333,15vh 31.5vh #633,16.5vh 31.5vh #966,18vh 31.5vh #633,19.5vh 31.5vh #333,21vh 31.5vh rgba(0, 0, 0, 0),22.5vh 31.5vh rgba(0, 0, 0, 0),24vh 31.5vh rgba(0, 0, 0, 0),1.5vh 33vh rgba(0, 0, 0, 0),3vh 33vh rgba(0, 0, 0, 0),4.5vh 33vh rgba(0, 0, 0, 0),6vh 33vh #333,7.5vh 33vh #333,9vh 33vh #333,10.5vh 33vh #333,12vh 33vh rgba(0, 0, 0, 0),13.5vh 33vh rgba(0, 0, 0, 0),15vh 33vh #333,16.5vh 33vh #333,18vh 33vh #333,19.5vh 33vh #333,21vh 33vh rgba(0, 0, 0, 0),22.5vh 33vh rgba(0, 0, 0, 0),24vh 33vh rgba(0, 0, 0, 0);
+}
+ .pixel-art--monstersInc {
+	 position: relative;
+	 width: 28.5vh;
+	 height: 36vh;
+}
+ .pixel-art--monstersInc:after {
+	 content: '';
+	 position: absolute;
+	 top: -1.5vh;
+	 left: -1.5vh;
+	 width: 1.5vh;
+	 height: 1.5vh;
+	 box-shadow: 1.5vh 1.5vh rgba(0, 0, 0, 0),3vh 1.5vh rgba(0, 0, 0, 0),4.5vh 1.5vh rgba(0, 0, 0, 0),6vh 1.5vh rgba(0, 0, 0, 0),7.5vh 1.5vh rgba(0, 0, 0, 0),9vh 1.5vh #a68f4d,10.5vh 1.5vh rgba(0, 0, 0, 0),12vh 1.5vh rgba(0, 0, 0, 0),13.5vh 1.5vh #71b20d,15vh 1.5vh #71b20d,16.5vh 1.5vh #71b20d,18vh 1.5vh rgba(0, 0, 0, 0),19.5vh 1.5vh rgba(0, 0, 0, 0),21vh 1.5vh #a68f4d,22.5vh 1.5vh rgba(0, 0, 0, 0),24vh 1.5vh rgba(0, 0, 0, 0),25.5vh 1.5vh rgba(0, 0, 0, 0),27vh 1.5vh rgba(0, 0, 0, 0),28.5vh 1.5vh rgba(0, 0, 0, 0),1.5vh 3vh rgba(0, 0, 0, 0),3vh 3vh rgba(0, 0, 0, 0),4.5vh 3vh rgba(0, 0, 0, 0),6vh 3vh rgba(0, 0, 0, 0),7.5vh 3vh rgba(0, 0, 0, 0),9vh 3vh #bba66b,10.5vh 3vh #bba66b,12vh 3vh #71b20d,13.5vh 3vh #71b20d,15vh 3vh #71b20d,16.5vh 3vh #71b20d,18vh 3vh #71b20d,19.5vh 3vh #bba66b,21vh 3vh #bba66b,22.5vh 3vh rgba(0, 0, 0, 0),24vh 3vh rgba(0, 0, 0, 0),25.5vh 3vh rgba(0, 0, 0, 0),27vh 3vh rgba(0, 0, 0, 0),28.5vh 3vh rgba(0, 0, 0, 0),1.5vh 4.5vh rgba(0, 0, 0, 0),3vh 4.5vh rgba(0, 0, 0, 0),4.5vh 4.5vh rgba(0, 0, 0, 0),6vh 4.5vh rgba(0, 0, 0, 0),7.5vh 4.5vh rgba(0, 0, 0, 0),9vh 4.5vh #bba66b,10.5vh 4.5vh #71b20d,12vh 4.5vh #71b20d,13.5vh 4.5vh #fff,15vh 4.5vh #fff,16.5vh 4.5vh #fff,18vh 4.5vh #71b20d,19.5vh 4.5vh #71b20d,21vh 4.5vh #bba66b,22.5vh 4.5vh rgba(0, 0, 0, 0),24vh 4.5vh rgba(0, 0, 0, 0),25.5vh 4.5vh rgba(0, 0, 0, 0),27vh 4.5vh rgba(0, 0, 0, 0),28.5vh 4.5vh rgba(0, 0, 0, 0),1.5vh 6vh rgba(0, 0, 0, 0),3vh 6vh rgba(0, 0, 0, 0),4.5vh 6vh rgba(0, 0, 0, 0),6vh 6vh rgba(0, 0, 0, 0),7.5vh 6vh rgba(0, 0, 0, 0),9vh 6vh #71b20d,10.5vh 6vh #71b20d,12vh 6vh #fff,13.5vh 6vh #fff,15vh 6vh #fff,16.5vh 6vh #fff,18vh 6vh #fff,19.5vh 6vh #71b20d,21vh 6vh #71b20d,22.5vh 6vh rgba(0, 0, 0, 0),24vh 6vh rgba(0, 0, 0, 0),25.5vh 6vh rgba(0, 0, 0, 0),27vh 6vh rgba(0, 0, 0, 0),28.5vh 6vh rgba(0, 0, 0, 0),1.5vh 7.5vh rgba(0, 0, 0, 0),3vh 7.5vh rgba(0, 0, 0, 0),4.5vh 7.5vh rgba(0, 0, 0, 0),6vh 7.5vh rgba(0, 0, 0, 0),7.5vh 7.5vh #71b20d,9vh 7.5vh #71b20d,10.5vh 7.5vh #f5f5dc,12vh 7.5vh #fff,13.5vh 7.5vh #fff,15vh 7.5vh #6495ed,16.5vh 7.5vh #fff,18vh 7.5vh #fff,19.5vh 7.5vh #fff,21vh 7.5vh #71b20d,22.5vh 7.5vh #71b20d,24vh 7.5vh rgba(0, 0, 0, 0),25.5vh 7.5vh rgba(0, 0, 0, 0),27vh 7.5vh rgba(0, 0, 0, 0),28.5vh 7.5vh rgba(0, 0, 0, 0),1.5vh 9vh rgba(0, 0, 0, 0),3vh 9vh rgba(0, 0, 0, 0),4.5vh 9vh rgba(0, 0, 0, 0),6vh 9vh rgba(0, 0, 0, 0),7.5vh 9vh #71b20d,9vh 9vh #71b20d,10.5vh 9vh #f5f5dc,12vh 9vh #f5f5dc,13.5vh 9vh #6495ed,15vh 9vh #000,16.5vh 9vh #6495ed,18vh 9vh #fff,19.5vh 9vh #fff,21vh 9vh #5c8b32,22.5vh 9vh #71b20d,24vh 9vh rgba(0, 0, 0, 0),25.5vh 9vh rgba(0, 0, 0, 0),27vh 9vh rgba(0, 0, 0, 0),28.5vh 9vh rgba(0, 0, 0, 0),1.5vh 10.5vh rgba(0, 0, 0, 0),3vh 10.5vh rgba(0, 0, 0, 0),4.5vh 10.5vh rgba(0, 0, 0, 0),6vh 10.5vh #71b20d,7.5vh 10.5vh #71b20d,9vh 10.5vh #71b20d,10.5vh 10.5vh #f5f5dc,12vh 10.5vh #f5f5dc,13.5vh 10.5vh #6495ed,15vh 10.5vh #000,16.5vh 10.5vh #6495ed,18vh 10.5vh #fff,19.5vh 10.5vh #fff,21vh 10.5vh #5c8b32,22.5vh 10.5vh #71b20d,24vh 10.5vh #71b20d,25.5vh 10.5vh rgba(0, 0, 0, 0),27vh 10.5vh rgba(0, 0, 0, 0),28.5vh 10.5vh rgba(0, 0, 0, 0),1.5vh 12vh rgba(0, 0, 0, 0),3vh 12vh rgba(0, 0, 0, 0),4.5vh 12vh #71b20d,6vh 12vh #71b20d,7.5vh 12vh #71b20d,9vh 12vh #71b20d,10.5vh 12vh #f5f5dc,12vh 12vh #f5f5dc,13.5vh 12vh #f5f5dc,15vh 12vh #6495ed,16.5vh 12vh #fff,18vh 12vh #fff,19.5vh 12vh #fff,21vh 12vh #5c8b32,22.5vh 12vh #71b20d,24vh 12vh #71b20d,25.5vh 12vh #71b20d,27vh 12vh rgba(0, 0, 0, 0),28.5vh 12vh rgba(0, 0, 0, 0),1.5vh 13.5vh rgba(0, 0, 0, 0),3vh 13.5vh rgba(0, 0, 0, 0),4.5vh 13.5vh #71b20d,6vh 13.5vh #71b20d,7.5vh 13.5vh #71b20d,9vh 13.5vh #71b20d,10.5vh 13.5vh #71b20d,12vh 13.5vh #f5f5dc,13.5vh 13.5vh #f5f5dc,15vh 13.5vh #f5f5dc,16.5vh 13.5vh #f5f5dc,18vh 13.5vh #fff,19.5vh 13.5vh #5c8b32,21vh 13.5vh #5c8b32,22.5vh 13.5vh #71b20d,24vh 13.5vh #71b20d,25.5vh 13.5vh #71b20d,27vh 13.5vh rgba(0, 0, 0, 0),28.5vh 13.5vh rgba(0, 0, 0, 0),1.5vh 15vh rgba(0, 0, 0, 0),3vh 15vh rgba(0, 0, 0, 0),4.5vh 15vh #71b20d,6vh 15vh #71b20d,7.5vh 15vh #71b20d,9vh 15vh #71b20d,10.5vh 15vh #71b20d,12vh 15vh #71b20d,13.5vh 15vh #71b20d,15vh 15vh #5c8b32,16.5vh 15vh #5c8b32,18vh 15vh #5c8b32,19.5vh 15vh #5c8b32,21vh 15vh #71b20d,22.5vh 15vh #71b20d,24vh 15vh #71b20d,25.5vh 15vh #71b20d,27vh 15vh rgba(0, 0, 0, 0),28.5vh 15vh rgba(0, 0, 0, 0),1.5vh 16.5vh rgba(0, 0, 0, 0),3vh 16.5vh #71b20d,4.5vh 16.5vh #71b20d,6vh 16.5vh #71b20d,7.5vh 16.5vh #71b20d,9vh 16.5vh #71b20d,10.5vh 16.5vh #71b20d,12vh 16.5vh #71b20d,13.5vh 16.5vh #71b20d,15vh 16.5vh #71b20d,16.5vh 16.5vh #71b20d,18vh 16.5vh #71b20d,19.5vh 16.5vh #71b20d,21vh 16.5vh #71b20d,22.5vh 16.5vh #71b20d,24vh 16.5vh #71b20d,25.5vh 16.5vh #71b20d,27vh 16.5vh #71b20d,28.5vh 16.5vh rgba(0, 0, 0, 0),1.5vh 18vh #71b20d,3vh 18vh #71b20d,4.5vh 18vh #71b20d,6vh 18vh #71b20d,7.5vh 18vh #71b20d,9vh 18vh #71b20d,10.5vh 18vh #71b20d,12vh 18vh #71b20d,13.5vh 18vh #000,15vh 18vh #000,16.5vh 18vh #000,18vh 18vh #5c8b32,19.5vh 18vh #71b20d,21vh 18vh #71b20d,22.5vh 18vh #71b20d,24vh 18vh #71b20d,25.5vh 18vh #71b20d,27vh 18vh #71b20d,28.5vh 18vh #71b20d,1.5vh 19.5vh #71b20d,3vh 19.5vh #71b20d,4.5vh 19.5vh #5c8b32,6vh 19.5vh #71b20d,7.5vh 19.5vh #71b20d,9vh 19.5vh #71b20d,10.5vh 19.5vh #71b20d,12vh 19.5vh #000,13.5vh 19.5vh #000,15vh 19.5vh #000,16.5vh 19.5vh #000,18vh 19.5vh #000,19.5vh 19.5vh #5c8b32,21vh 19.5vh #71b20d,22.5vh 19.5vh #71b20d,24vh 19.5vh #71b20d,25.5vh 19.5vh #71b20d,27vh 19.5vh #71b20d,28.5vh 19.5vh #71b20d,1.5vh 21vh #71b20d,3vh 21vh #71b20d,4.5vh 21vh rgba(0, 0, 0, 0),6vh 21vh #5c8b32,7.5vh 21vh #71b20d,9vh 21vh #71b20d,10.5vh 21vh #000,12vh 21vh #fff,13.5vh 21vh #fff,15vh 21vh #fff,16.5vh 21vh #fff,18vh 21vh #fff,19.5vh 21vh #000,21vh 21vh #71b20d,22.5vh 21vh #71b20d,24vh 21vh #71b20d,25.5vh 21vh rgba(0, 0, 0, 0),27vh 21vh #71b20d,28.5vh 21vh #71b20d,1.5vh 22.5vh #71b20d,3vh 22.5vh #71b20d,4.5vh 22.5vh rgba(0, 0, 0, 0),6vh 22.5vh #5c8b32,7.5vh 22.5vh #71b20d,9vh 22.5vh #71b20d,10.5vh 22.5vh #71b20d,12vh 22.5vh #71b20d,13.5vh 22.5vh #71b20d,15vh 22.5vh #71b20d,16.5vh 22.5vh #71b20d,18vh 22.5vh #71b20d,19.5vh 22.5vh #71b20d,21vh 22.5vh #71b20d,22.5vh 22.5vh #71b20d,24vh 22.5vh #71b20d,25.5vh 22.5vh rgba(0, 0, 0, 0),27vh 22.5vh #71b20d,28.5vh 22.5vh #71b20d,1.5vh 24vh #71b20d,3vh 24vh #71b20d,4.5vh 24vh rgba(0, 0, 0, 0),6vh 24vh rgba(0, 0, 0, 0),7.5vh 24vh #5c8b32,9vh 24vh #71b20d,10.5vh 24vh #71b20d,12vh 24vh #71b20d,13.5vh 24vh #71b20d,15vh 24vh #71b20d,16.5vh 24vh #71b20d,18vh 24vh #71b20d,19.5vh 24vh #71b20d,21vh 24vh #71b20d,22.5vh 24vh #71b20d,24vh 24vh rgba(0, 0, 0, 0),25.5vh 24vh rgba(0, 0, 0, 0),27vh 24vh #71b20d,28.5vh 24vh #71b20d,1.5vh 25.5vh #71b20d,3vh 25.5vh #71b20d,4.5vh 25.5vh rgba(0, 0, 0, 0),6vh 25.5vh rgba(0, 0, 0, 0),7.5vh 25.5vh rgba(0, 0, 0, 0),9vh 25.5vh #71b20d,10.5vh 25.5vh #71b20d,12vh 25.5vh #71b20d,13.5vh 25.5vh #71b20d,15vh 25.5vh #71b20d,16.5vh 25.5vh #71b20d,18vh 25.5vh #71b20d,19.5vh 25.5vh #71b20d,21vh 25.5vh #71b20d,22.5vh 25.5vh rgba(0, 0, 0, 0),24vh 25.5vh rgba(0, 0, 0, 0),25.5vh 25.5vh rgba(0, 0, 0, 0),27vh 25.5vh #71b20d,28.5vh 25.5vh #71b20d,1.5vh 27vh #71b20d,3vh 27vh #71b20d,4.5vh 27vh rgba(0, 0, 0, 0),6vh 27vh rgba(0, 0, 0, 0),7.5vh 27vh rgba(0, 0, 0, 0),9vh 27vh #71b20d,10.5vh 27vh #5c8b32,12vh 27vh #5c8b32,13.5vh 27vh #5c8b32,15vh 27vh #5c8b32,16.5vh 27vh #5c8b32,18vh 27vh #5c8b32,19.5vh 27vh #5c8b32,21vh 27vh #71b20d,22.5vh 27vh rgba(0, 0, 0, 0),24vh 27vh rgba(0, 0, 0, 0),25.5vh 27vh rgba(0, 0, 0, 0),27vh 27vh #71b20d,28.5vh 27vh #71b20d,1.5vh 28.5vh #71b20d,3vh 28.5vh #71b20d,4.5vh 28.5vh rgba(0, 0, 0, 0),6vh 28.5vh rgba(0, 0, 0, 0),7.5vh 28.5vh rgba(0, 0, 0, 0),9vh 28.5vh #71b20d,10.5vh 28.5vh #71b20d,12vh 28.5vh rgba(0, 0, 0, 0),13.5vh 28.5vh rgba(0, 0, 0, 0),15vh 28.5vh rgba(0, 0, 0, 0),16.5vh 28.5vh rgba(0, 0, 0, 0),18vh 28.5vh rgba(0, 0, 0, 0),19.5vh 28.5vh #71b20d,21vh 28.5vh #71b20d,22.5vh 28.5vh rgba(0, 0, 0, 0),24vh 28.5vh rgba(0, 0, 0, 0),25.5vh 28.5vh rgba(0, 0, 0, 0),27vh 28.5vh #71b20d,28.5vh 28.5vh #71b20d,1.5vh 30vh #71b20d,3vh 30vh #71b20d,4.5vh 30vh #5c8b32,6vh 30vh rgba(0, 0, 0, 0),7.5vh 30vh rgba(0, 0, 0, 0),9vh 30vh #71b20d,10.5vh 30vh #71b20d,12vh 30vh rgba(0, 0, 0, 0),13.5vh 30vh rgba(0, 0, 0, 0),15vh 30vh rgba(0, 0, 0, 0),16.5vh 30vh rgba(0, 0, 0, 0),18vh 30vh rgba(0, 0, 0, 0),19.5vh 30vh #71b20d,21vh 30vh #71b20d,22.5vh 30vh rgba(0, 0, 0, 0),24vh 30vh rgba(0, 0, 0, 0),25.5vh 30vh #5c8b32,27vh 30vh #71b20d,28.5vh 30vh #71b20d,1.5vh 31.5vh #71b20d,3vh 31.5vh #71b20d,4.5vh 31.5vh #71b20d,6vh 31.5vh #71b20d,7.5vh 31.5vh rgba(0, 0, 0, 0),9vh 31.5vh #71b20d,10.5vh 31.5vh #71b20d,12vh 31.5vh rgba(0, 0, 0, 0),13.5vh 31.5vh rgba(0, 0, 0, 0),15vh 31.5vh rgba(0, 0, 0, 0),16.5vh 31.5vh rgba(0, 0, 0, 0),18vh 31.5vh rgba(0, 0, 0, 0),19.5vh 31.5vh #71b20d,21vh 31.5vh #71b20d,22.5vh 31.5vh rgba(0, 0, 0, 0),24vh 31.5vh #71b20d,25.5vh 31.5vh #71b20d,27vh 31.5vh #71b20d,28.5vh 31.5vh #71b20d,1.5vh 33vh #71b20d,3vh 33vh rgba(0, 0, 0, 0),4.5vh 33vh rgba(0, 0, 0, 0),6vh 33vh rgba(0, 0, 0, 0),7.5vh 33vh rgba(0, 0, 0, 0),9vh 33vh #71b20d,10.5vh 33vh #71b20d,12vh 33vh rgba(0, 0, 0, 0),13.5vh 33vh rgba(0, 0, 0, 0),15vh 33vh rgba(0, 0, 0, 0),16.5vh 33vh rgba(0, 0, 0, 0),18vh 33vh rgba(0, 0, 0, 0),19.5vh 33vh #71b20d,21vh 33vh #71b20d,22.5vh 33vh rgba(0, 0, 0, 0),24vh 33vh rgba(0, 0, 0, 0),25.5vh 33vh rgba(0, 0, 0, 0),27vh 33vh rgba(0, 0, 0, 0),28.5vh 33vh #71b20d,1.5vh 34.5vh rgba(0, 0, 0, 0),3vh 34.5vh rgba(0, 0, 0, 0),4.5vh 34.5vh rgba(0, 0, 0, 0),6vh 34.5vh rgba(0, 0, 0, 0),7.5vh 34.5vh #71b20d,9vh 34.5vh #71b20d,10.5vh 34.5vh #71b20d,12vh 34.5vh #71b20d,13.5vh 34.5vh rgba(0, 0, 0, 0),15vh 34.5vh rgba(0, 0, 0, 0),16.5vh 34.5vh rgba(0, 0, 0, 0),18vh 34.5vh #71b20d,19.5vh 34.5vh #71b20d,21vh 34.5vh #71b20d,22.5vh 34.5vh #71b20d,24vh 34.5vh rgba(0, 0, 0, 0),25.5vh 34.5vh rgba(0, 0, 0, 0),27vh 34.5vh rgba(0, 0, 0, 0),28.5vh 34.5vh rgba(0, 0, 0, 0),1.5vh 36vh rgba(0, 0, 0, 0),3vh 36vh rgba(0, 0, 0, 0),4.5vh 36vh rgba(0, 0, 0, 0),6vh 36vh #71b20d,7.5vh 36vh #bba66b,9vh 36vh #71b20d,10.5vh 36vh #71b20d,12vh 36vh #bba66b,13.5vh 36vh #71b20d,15vh 36vh rgba(0, 0, 0, 0),16.5vh 36vh #71b20d,18vh 36vh #bba66b,19.5vh 36vh #71b20d,21vh 36vh #71b20d,22.5vh 36vh #bba66b,24vh 36vh #71b20d,25.5vh 36vh rgba(0, 0, 0, 0),27vh 36vh rgba(0, 0, 0, 0),28.5vh 36vh rgba(0, 0, 0, 0);
+}
+ HEADER {
+	 font-size: 1.5em;
+	 vertical-align: center;
+	 color: #fff;
+	 position: relative;
+	 padding-top: 1vh;
+}
+ HEADER H1 {
+	 text-align: center;
+	 font-family: 'Butcherman', cursive;
+}
+ HEADER H1 P {
+	 color: #333;
+	 font-size: 1em;
+	 font-weight: bold;
+	 text-shadow: 1px 1px 0.25em gold;
+	 text-align: center;
+	 transform: rotate(-2.5deg);
+}
+ FOOTER {
+	 font-family: 'Baloo Da', cursive;
+	 white-space: nowrap;
+	 z-index: 1;
+	 color: #fff;
+	 text-align: center;
+}
+ FOOTER A {
+	 color: #8a0707;
+	 text-decoration: none;
+	 transition: 0.2s all;
+}
+ FOOTER A:hover {
+	 color: #bb0909;
+}
+ .overlay {
+	 width: 100vw;
+	 height: 100vh;
+	 position: absolute;
+	 background: rgba(255, 255, 255, 0.1);
+}
+ [class*="frank"] + h3 {
+	 --text-color: green;
+}
+ [class*="zombie"] + h3 {
+	 --text-color: #7fc2b9;
+}
+ [class*="dracula"] + h3 {
+	 --text-color: purple;
+}
+ [class*="werewolf"] + h3 {
+	 --text-color: #633;
+}
+ @media only screen and (min-device-width: 320px) and (max-device-width: 720px) {
+	 BODY {
+		 overflow-y: scroll;
+	}
+	 BODY .monster DIV:after {
+		 opacity: 1;
+	}
+	 .container {
+		 flex-direction: column;
+	}
+}
+ 
